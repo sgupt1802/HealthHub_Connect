@@ -1,0 +1,32 @@
+const mongoose = require("mongoose");
+
+const schema = mongoose.Schema(
+  {
+    userId: {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    isRead: {
+      type: Boolean,
+      default: false,
+    },
+    content: {
+      type: String,
+      default: "",
+    },
+  },
+  // {
+  //   timestamps: true,
+  // }
+  {
+    timestamps: {
+      currentTime: () => new Date(),
+    },
+    timeZone: 'Asia/Kolkata', // set your desired time zone
+  }
+);
+
+const Notification = mongoose.model("Notification", schema);
+
+module.exports = Notification;
