@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import BookAppointment from "../components/BookAppointment";
 import { toast } from "react-hot-toast";
 
+
 const DoctorCard = ({ ele }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -12,6 +13,12 @@ const DoctorCard = ({ ele }) => {
       return toast.error("You must log in first");
     }
     setModalOpen(true);
+  };
+
+  const handleModal2 = () => {
+    // Replace '/your-link' with the actual link you want to navigate to
+    // window.location.href = 'https://rzp.io/l/AI5DR4hOwj';
+    window.open('https://rzp.io/l/AI5DR4hOwj', '_blank');
   };
 
   return (
@@ -55,6 +62,12 @@ const DoctorCard = ({ ele }) => {
           ele={ele}
         />
       )}
+      <button
+        className="btn appointment-btn"
+        onClick={handleModal2}
+      >
+        Payment
+      </button>
     </div>
   );
 };
