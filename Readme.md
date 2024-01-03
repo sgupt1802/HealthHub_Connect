@@ -5,8 +5,9 @@
 - Chetan Kumar-211080002
 
 
-## Hosted Link
-The project is currently hosted at [your hosted link].
+## TechStack Used
+MERN Stack(MONGO,EXPRESS,REACT,NODE)
 
 
-
+## Github Link
+https://github.com/sgupt1802/HealthHub_Connect
